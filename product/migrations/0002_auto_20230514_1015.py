@@ -417,6 +417,7 @@ def beginning(apps, schema_editor):
     catalog.title='Смартфон Samsung Galaxy A02, 32Gb, Black (SM-A022G)'
     catalog.details='Большой 6.5-дюймовый HD+ экран с V-образным вырезом для камеры создан для и полного погружения в контент.'
     catalog.price=53990
+    catalog.photo='images/product8.jpg'
     catalog.save()
     
     sale = Sale()
@@ -1057,6 +1058,7 @@ def beginning(apps, schema_editor):
     catalog.title='Мобильный телефон Nokia 125 DS, Black'
     catalog.details='Размер экрана, дюйм: 2.4 / Разрешение экрана: 240 x 320 / Объем встроенной памяти: 4 Мб / Емкость аккумулятора: 1020 мАч'
     catalog.price=13390
+    catalog.photo='images/product21.jpg'
     catalog.save()
     
     sale = Sale()
