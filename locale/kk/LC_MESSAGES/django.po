@@ -1,0 +1,594 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-14 15:48+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: .\product\forms.py:26 .\product\models.py:32 .\product\models.py:65
+#: .\templates\catalog\index.html:13
+msgid "category_title"
+msgstr "Санат атауы"
+
+#: .\product\forms.py:33
+msgid "Value must start with a capital letter"
+msgstr "Мән бас әріптен басталуы керек"
+
+#: .\product\forms.py:49 .\product\models.py:141
+#: .\templates\category\create.html:6 .\templates\category\edit.html:6
+#: .\templates\category\read.html:6 .\templates\delivery\list.html:21
+#: .\templates\report\index.html:160
+msgid "category"
+msgstr "Санат"
+
+#: .\product\forms.py:50 .\product\models.py:44 .\product\models.py:66
+#: .\product\models.py:142 .\templates\catalog\index.html:14
+msgid "catalog_title"
+msgstr "Аты"
+
+#: .\product\forms.py:51 .\product\forms.py:83
+#: .\templates\catalog\details.html:19
+msgid "details"
+msgstr "Өнім сипаттамасы"
+
+#: .\product\forms.py:52 .\product\models.py:46 .\product\models.py:68
+#: .\product\models.py:88 .\product\models.py:109 .\product\models.py:144
+#: .\templates\catalog\index.html:16
+msgid "price"
+msgstr "Бағасы"
+
+#: .\product\forms.py:60
+msgid "Quantity must be greater than zero"
+msgstr "Саны нөлден үлкен болуы керек"
+
+#: .\product\forms.py:69
+msgid "Price must be greater than zero"
+msgstr "Баға нөлден жоғары болуы керек"
+
+#: .\product\forms.py:82 .\product\models.py:178
+#: .\templates\delivery\index.html:19 .\templates\delivery\read.html:22
+#: .\templates\report\index.html:156
+msgid "movement"
+msgstr "Қозғалады"
+
+#: .\product\forms.py:92
+msgid "Cannot be greater than the current date"
+msgstr "Ағымдағы күннен үлкен болуы мүмкін емес"
+
+#: .\product\forms.py:112
+msgid "Wrong date and time format"
+msgstr "Күн мен уақыт пішімі қате"
+
+#: .\product\models.py:45 .\product\models.py:67
+#: .\templates\catalog\index.html:15
+msgid "catalog_details"
+msgstr "Өнім сипаттамасы"
+
+#: .\product\models.py:47 .\product\models.py:69 .\product\models.py:143
+#: .\templates\catalog\index.html:17
+msgid "photo"
+msgstr "Фото"
+
+#: .\product\models.py:64
+msgid "category_id"
+msgstr ""
+
+#: .\product\models.py:70
+msgid "avg_rating"
+msgstr "Орташа рейтинг"
+
+#: .\product\models.py:86
+msgid "basketday"
+msgstr "Күні"
+
+#: .\product\models.py:89 .\product\models.py:110 .\product\models.py:145
+msgid "quantity"
+msgstr "Саны"
+
+#: .\product\models.py:107 .\product\models.py:139
+#: .\templates\delivery\list.html:19 .\templates\report\index.html:158
+msgid "saleday"
+msgstr "Сату күні"
+
+#: .\product\models.py:112 .\product\models.py:148
+#: .\templates\report\index.html:194
+msgid "rating"
+msgstr "Баға"
+
+#: .\product\models.py:113 .\product\models.py:149
+#: .\templates\report\index.html:195
+msgid "review_details"
+msgstr "Мәліметтерді қарап шығу"
+
+#: .\product\models.py:138 .\templates\delivery\list.html:20
+#: .\templates\report\index.html:121 .\templates\report\index.html:159
+#: .\templates\report\index.html:191
+msgid "username"
+msgstr "Пайдаланушы"
+
+#: .\product\models.py:140
+msgid "catalog_id"
+msgstr ""
+
+#: .\product\models.py:146
+msgid "total"
+msgstr "Сомасы"
+
+#: .\product\models.py:147
+msgid "user_id"
+msgstr ""
+
+#: .\product\models.py:150 .\templates\delivery\list.html:23
+msgid "final"
+msgstr "Соңғы қозғалыс"
+
+#: .\product\models.py:172
+msgid "Application accepted for processing"
+msgstr "Өтінім өңдеуге қабылданды"
+
+#: .\product\models.py:173
+msgid "Goods in transit"
+msgstr "Жолда тапсырыс беріңіз"
+
+#: .\product\models.py:174
+msgid "The application is closed, the goods have been delivered"
+msgstr "Өтінім жабылды, тапсырыс жеткізілді"
+
+#: .\product\models.py:177 .\templates\delivery\index.html:18
+#: .\templates\delivery\read.html:18 .\templates\report\index.html:155
+msgid "deliveryday"
+msgstr "Күні"
+
+#: .\product\models.py:179 .\templates\delivery\index.html:20
+#: .\templates\delivery\read.html:26 .\templates\report\index.html:157
+msgid "delivery_details"
+msgstr "Жеткізу мәліметтері"
+
+#: .\product\models.py:197 .\templates\news\index.html:12
+msgid "daten"
+msgstr "Күні"
+
+#: .\product\models.py:198
+msgid "title_news"
+msgstr "Жаңалықтар тақырыбы"
+
+#: .\product\models.py:199
+msgid "details_news"
+msgstr "Жаңалықтар мәліметтері"
+
+#: .\product\models.py:200
+msgid "photo_news"
+msgstr "Фото"
+
+#: .\product\views.py:197
+msgid "Item added to basket"
+msgstr "Өнім себетке қосылды"
+
+#: .\templates\base.html:35
+msgid "Home"
+msgstr "Үй"
+
+#: .\templates\base.html:42 .\templates\report\index.html:11
+#: .\templates\report\index.html:26
+msgid "Catalog"
+msgstr "Каталог"
+
+#: .\templates\base.html:45 .\templates\base.html:63
+#: .\templates\index.html:221 .\templates\news\index.html:3
+#: .\templates\news\index.html:6 .\templates\news\list.html:4
+#: .\templates\news\list.html:8
+msgid "newss"
+msgstr "Жаңалықтар"
+
+#: .\templates\base.html:48 .\templates\contact.html:8
+msgid "Contacts"
+msgstr "Контактілер"
+
+#: .\templates\base.html:57 .\templates\category\index.html:3
+#: .\templates\category\index.html:6
+msgid "categorys"
+msgstr "Санаттар"
+
+#: .\templates\base.html:58 .\templates\catalog\create.html:6
+#: .\templates\catalog\edit.html:6 .\templates\catalog\index.html:4
+#: .\templates\catalog\index.html:7
+msgid "catalog"
+msgstr "Каталог"
+
+#: .\templates\base.html:60 .\templates\base.html:68
+#: .\templates\delivery\create.html:6 .\templates\delivery\edit.html:6
+#: .\templates\delivery\list.html:40 .\templates\delivery\read.html:6
+#: .\templates\report\index.html:17 .\templates\report\index.html:148
+msgid "delivery"
+msgstr "Жеткізу"
+
+#: .\templates\base.html:61 .\templates\report\index.html:4
+#: .\templates\report\index.html:7
+msgid "reports"
+msgstr "Есептер"
+
+#: .\templates\base.html:66 .\templates\catalog\buy.html:4
+#: .\templates\catalog\buy.html:7
+msgid "My purchases"
+msgstr "Менің сатып алуларым"
+
+#: .\templates\base.html:67 .\templates\catalog\basket.html:4
+#: .\templates\catalog\basket.html:7 .\templates\catalog\list.html:10
+msgid "Basket"
+msgstr "Себет"
+
+#: .\templates\base.html:71 .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+msgid "My account"
+msgstr "Менің аккаунтым"
+
+#: .\templates\base.html:72
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:15
+msgid "Change password"
+msgstr "Құпия сөзді өзгерту"
+
+#: .\templates\base.html:74
+msgid "Log out"
+msgstr "Шығу"
+
+#: .\templates\base.html:79
+msgid "Log In"
+msgstr "Кіру"
+
+#: .\templates\base.html:80 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Тіркеу"
+
+#: .\templates\catalog\basket.html:89 .\templates\catalog\index.html:98
+#: .\templates\category\index.html:26 .\templates\delivery\index.html:36
+#: .\templates\news\index.html:37
+msgid "Delete"
+msgstr "Жою"
+
+#: .\templates\catalog\basket.html:103 .\templates\catalog\basket.html:119
+msgid "Basket total"
+msgstr "Себеттегі барлығы"
+
+#: .\templates\catalog\basket.html:107
+msgid "Go payment"
+msgstr "Төлемге өтіңіз"
+
+#: .\templates\catalog\basket.html:118
+msgid "Payment method"
+msgstr "Төлем тәсілі"
+
+#: .\templates\catalog\basket.html:126
+msgid "Card"
+msgstr "Карта"
+
+#: .\templates\catalog\basket.html:130
+msgid "In cash"
+msgstr "Курьерге қолма-қол ақша"
+
+#: .\templates\catalog\basket.html:139
+msgid "Card number"
+msgstr "Карточка нөмірі"
+
+#: .\templates\catalog\basket.html:146
+msgid "Card holder"
+msgstr ""
+
+#: .\templates\catalog\basket.html:150
+msgid "Expiration date"
+msgstr "Жарамдылық"
+
+#: .\templates\catalog\basket.html:163
+msgid "Buy"
+msgstr "Сатып алу"
+
+#: .\templates\catalog\basket.html:164 .\templates\catalog\create.html:14
+#: .\templates\catalog\details.html:96 .\templates\catalog\edit.html:14
+#: .\templates\catalog\read.html:83 .\templates\category\create.html:14
+#: .\templates\category\edit.html:14 .\templates\category\read.html:18
+#: .\templates\delivery\create.html:14 .\templates\delivery\edit.html:14
+#: .\templates\delivery\index.html:11 .\templates\delivery\read.html:35
+#: .\templates\news\create.html:14 .\templates\news\edit.html:14
+#: .\templates\news\read.html:45
+msgid "Back"
+msgstr "Артқа"
+
+#: .\templates\catalog\buy.html:89 .\templates\catalog\details.html:110
+#: .\templates\index.html:210
+msgid "Rating"
+msgstr "Баға"
+
+#: .\templates\catalog\buy.html:93
+msgid "Rating details"
+msgstr "Мәліметтерді қарап шығу"
+
+#: .\templates\catalog\buy.html:97
+msgid "Change Review"
+msgstr "Пікірді өңдеу"
+
+#: .\templates\catalog\buy.html:97
+msgid "Review"
+msgstr "Қарау"
+
+#: .\templates\catalog\create.html:3 .\templates\catalog\index.html:18
+#: .\templates\catalog\index.html:106 .\templates\category\create.html:3
+#: .\templates\delivery\create.html:3 .\templates\delivery\index.html:22
+#: .\templates\news\create.html:3 .\templates\news\index.html:15
+#: .\templates\news\index.html:45
+msgid "Create"
+msgstr "Жасау"
+
+#: .\templates\catalog\create.html:13 .\templates\catalog\edit.html:13
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\delivery\create.html:13 .\templates\delivery\edit.html:13
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+msgid "Save"
+msgstr "Сақтау"
+
+#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:96
+msgid "Catalog details"
+msgstr "Сипаттама"
+
+#: .\templates\catalog\details.html:83 .\templates\index.html:190
+msgid "Sale Quantity"
+msgstr "Барлығы сатылған"
+
+#: .\templates\catalog\details.html:86 .\templates\catalog\details.html:102
+#: .\templates\index.html:202 .\templates\report\index.html:20
+#: .\templates\report\index.html:183
+msgid "Reviews"
+msgstr "Пікірлер"
+
+#: .\templates\catalog\details.html:90 .\templates\catalog\list.html:102
+#: .\templates\index.html:187
+msgid "Avg Rating"
+msgstr "Орташа рейтинг"
+
+#: .\templates\catalog\details.html:108 .\templates\report\index.html:120
+#: .\templates\report\index.html:190
+msgid "Saleday"
+msgstr "Сату күні"
+
+#: .\templates\catalog\details.html:120
+msgid "No reviews yet"
+msgstr "Әзірге шолулар жоқ"
+
+#: .\templates\catalog\edit.html:3 .\templates\catalog\index.html:96
+#: .\templates\category\edit.html:3 .\templates\category\index.html:24
+#: .\templates\delivery\edit.html:3 .\templates\delivery\index.html:34
+#: .\templates\news\edit.html:3 .\templates\news\index.html:35
+msgid "Change"
+msgstr "Өзгерту"
+
+#: .\templates\catalog\index.html:97 .\templates\catalog\read.html:4
+#: .\templates\category\read.html:3 .\templates\delivery\index.html:35
+#: .\templates\delivery\read.html:3 .\templates\news\read.html:4
+msgid "Read"
+msgstr "Көру"
+
+#: .\templates\catalog\list.html:4 .\templates\catalog\list.html:7
+msgid "Catalog list"
+msgstr "Толық каталог"
+
+#: .\templates\catalog\list.html:107
+msgid "Add to basket"
+msgstr "Себетке қосу"
+
+#: .\templates\category\index.html:12
+msgid "Category_title"
+msgstr "санат атауы"
+
+#: .\templates\category\index.html:14 .\templates\category\index.html:34
+#: .\templates\delivery\index.html:46
+msgid "Add"
+msgstr "Қосу"
+
+#: .\templates\category\index.html:25 .\templates\news\index.html:36
+msgid "View"
+msgstr "Көру"
+
+#: .\templates\delivery\index.html:3 .\templates\delivery\index.html:12
+#: .\templates\delivery\list.html:3 .\templates\delivery\list.html:7
+msgid "deliverys"
+msgstr "Жеткізу"
+
+#: .\templates\delivery\index.html:6 .\templates\delivery\list.html:6
+#: .\templates\report\index.html:14 .\templates\report\index.html:113
+msgid "Sale"
+msgstr "Сатылым"
+
+#: .\templates\delivery\list.html:22 .\templates\news\index.html:13
+#: .\templates\report\index.html:161
+msgid "title"
+msgstr "Аты"
+
+#: .\templates\delivery\read.html:14
+msgid "delivery_title"
+msgstr "Аты"
+
+#: .\templates\index.html:4
+msgid "App name"
+msgstr "Shop"
+
+#: .\templates\index.html:107 .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Қош келдіңіз"
+
+#: .\templates\index.html:120
+msgid "Full Catalog"
+msgstr "Толық каталог"
+
+#: .\templates\index.html:266
+msgid "all newss"
+msgstr "Барлық жаңалықтар"
+
+#: .\templates\news\create.html:6 .\templates\news\edit.html:6
+#: .\templates\news\read.html:7
+msgid "news"
+msgstr "Жаңалықтар"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Shop"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Сіз шықтыңыз!"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Жүйеге қайта кіріңіз"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Қате логин немесе құпиясөз"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "Сізде рұқсат жоқ"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Бұл бетті көру үшін жүйеге кіріңіз"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:27
+msgid "Login"
+msgstr "Кіру үшін"
+
+#: .\templates\registration\login.html:33
+msgid "Lost password?"
+msgstr "Құпия сөзіңізді ұмыттыңыз ба?"
+
+#: .\templates\registration\login.html:34
+#: .\templates\registration\signup.html:15
+msgid "Create an account"
+msgstr "Аккаунты құру"
+
+#: .\templates\registration\my_account.html:15
+msgid "Save changes"
+msgstr "Өзгерістерді сақтау"
+
+#: .\templates\registration\password_change_done.html:5
+msgid "Password changed"
+msgstr "Құпия сөз өзгертілді"
+
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Password reset completed!"
+msgstr "Құпия сөзді қалпына келтіру аяқталды"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Қайтадан кіріңіз?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Құпия сөзді қалпына келтіруді растау"
+
+#: .\templates\registration\password_reset_confirm.html:18
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:16
+msgid "Reset password"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_confirm.html:26
+msgid "Please enter (and confirm) your new password."
+msgstr "Жаңа құпия сөзді енгізіңіз (және растаңыз)."
+
+#: .\templates\registration\password_reset_confirm.html:32
+msgid "New password:"
+msgstr "Жаңа құпия сөз:"
+
+#: .\templates\registration\password_reset_confirm.html:37
+msgid "Confirm password:"
+msgstr "Құпия сөзді растаңыз:"
+
+#: .\templates\registration\password_reset_confirm.html:48
+msgid "Password reset failed"
+msgstr "Құпия сөзді қалпына келтіру мүмкін болмады"
+
+#: .\templates\registration\password_reset_confirm.html:49
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr "Құпия сөзді қалпына келтіру сілтемесі жарамсыз, себебі "
+"пайдаланылды. Жаңа құпия сөзді қалпына келтіруді сұраңыз."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Электрондық поштаңызды тексеріңіз"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Құпия сөзді қалпына келтіру электрондық поштасы"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Төмендегі сілтеме бойынша өтіңіз:"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Есептік жазбаңыз сәтті жасалды."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:20
+msgid "Log in"
+msgstr "Кіру"
+
+#: .\templates\registration\signup.html:20
+msgid "Already have an account?"
+msgstr "Сізде бұрыннан тіркелгі бар ма?"
+
+#: .\templates\report\index.html:33 .\templates\report\index.html:122
+#: .\templates\report\index.html:192
+msgid "Category"
+msgstr "Санат"
+
+#: .\templates\report\index.html:34 .\templates\report\index.html:123
+#: .\templates\report\index.html:193
+msgid "Title"
+msgstr "Аты"
+
+#: .\templates\report\index.html:35 .\templates\report\index.html:124
+msgid "Price"
+msgstr "Бағасы"
+
+#: .\templates\report\index.html:36
+msgid "Photo"
+msgstr "Фото"
+
+#: .\templates\report\index.html:125
+msgid "Quantity"
+msgstr "Саны"
+
+#: .\templates\report\index.html:126
+msgid "Total"
+msgstr "Сомасы"
