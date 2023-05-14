@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-lui@m4qiebryof0p=*k%70+*vb_2_--b!gpfd+4id97t(c#4%)
 DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'shop-cloth.onrender.com',]
+ALLOWED_HOSTS = ['127.0.0.1', 'shop-enu.onrender.com',]
 
 
 
