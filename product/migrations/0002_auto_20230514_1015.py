@@ -84,9 +84,50 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 3
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Достоинства: тонкий и легкий большой экран'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+
+    sale = Sale()
+    #sale.saleday = datetime.now()
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 4
+    sale.rating = 4
+    sale.details='Достоинства:Довольно не плохой. Недостатки:Простоват, экономия на ,,шпильках,,'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
 
     delivery = Delivery()
@@ -126,44 +167,44 @@ def beginning(apps, schema_editor):
     catalog.photo='images/product2.jpg'
     catalog.save()
     
-    sale = Sale()
-    #sale.saleday = datetime.now()
-    sale.catalog = catalog
-    sale.price = catalog.price
-    sale.quantity = 1
-    sale.user_id = 4
-    sale.rating = 5
-    sale.details='Отзыв'
-    sale.save()
-    sale.saleday = datetime.now() - timedelta(days=29)
-    sale.save()
+    #sale = Sale()
+    ##sale.saleday = datetime.now()
+    #sale.catalog = catalog
+    #sale.price = catalog.price
+    #sale.quantity = 1
+    #sale.user_id = 4
+    #sale.rating = 5
+    #sale.details='Отзыв'
+    #sale.save()
+    #sale.saleday = datetime.now() - timedelta(days=29)
+    #sale.save()
 
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday 
-    delivery.movement = 'Заявка принята в обработку'
-    delivery.details='Заявка принята в обработку'
-    delivery.save()
-    delivery.deliveryday = sale.saleday
-    delivery.save()
-    
-    delivery = Delivery()
-    delivery.sale = sale
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday 
+    #delivery.movement = 'Заявка принята в обработку'
+    #delivery.details='Заявка принята в обработку'
+    #delivery.save()
     #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заказ в пути'
-    delivery.details='Заказ в пути'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
-    delivery.save()
+    #delivery.save()
     
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заявка закрыта, заказ доставлен'
-    delivery.details='Заявка закрыта, заказ доставлен'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=1)
-    delivery.save()
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заказ в пути'
+    #delivery.details='Заказ в пути'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    #delivery.save()
+    
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заявка закрыта, заказ доставлен'
+    #delivery.details='Заявка закрыта, заказ доставлен'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    #delivery.save()
 
     ###### ----- ######
     
@@ -182,7 +223,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 5
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Просто отличный телефон за эти деньги!'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -231,7 +272,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 6
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Цена=качество. отличный телефон за низкую стоимость. В комплекте прозрачный чехол. всё устроило.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -279,8 +320,8 @@ def beginning(apps, schema_editor):
     sale.price = catalog.price
     sale.quantity = 1
     sale.user_id = 7
-    sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.rating = 4
+    sale.details='Шустро работает. Фото яркие, не виснет.Недостатки:В самом телефоне от производителя сделаны недостатки. Разработчики телефона посчитали что пять сообщений в день (даже не в сутки) будет в полне достаточно. В следующий раз оповещения начнут работать только через сутки. И за это время хоть башкой бейся но если пять оповещений было, то даже важные оповещения не дойдут'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -329,9 +370,50 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 8
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Хороший телефон, для ребенка самое то, игры тянет нормально, не глючит, зарядку держит достойно, камера, конечно, слабенькая, но за эти деньги другого и не приходится ожидать.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 9
+    sale.rating = 4
+    sale.details='Достоинства: Заряд батарейки, особенно первое время, держит намного больше чем известный яблочный бренд). Недостатки: Сенсор экрана настолько близок к краю смартфона, что привычно держать его в одной руке и манипулировать пальцем другой проблематично.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
 
     delivery = Delivery()
@@ -371,44 +453,44 @@ def beginning(apps, schema_editor):
     catalog.photo='images/product7.jpg'
     catalog.save()
     
-    sale = Sale()
-    #sale.saleday = datetime.now() 
-    sale.catalog = catalog
-    sale.price = catalog.price
-    sale.quantity = 1
-    sale.user_id = 9
-    sale.rating = 5
-    sale.details='Отзыв!!'
-    sale.save()
-    sale.saleday = datetime.now() - timedelta(days=30)
-    sale.save()
+    #sale = Sale()
+    ##sale.saleday = datetime.now() 
+    #sale.catalog = catalog
+    #sale.price = catalog.price
+    #sale.quantity = 1
+    #sale.user_id = 9
+    #sale.rating = 5
+    #sale.details='Отзыв!!'
+    #sale.save()
+    #sale.saleday = datetime.now() - timedelta(days=30)
+    #sale.save()
 
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday 
-    delivery.movement = 'Заявка принята в обработку'
-    delivery.details='Заявка принята в обработку'
-    delivery.save()
-    delivery.deliveryday = sale.saleday
-    delivery.save()
-    
-    delivery = Delivery()
-    delivery.sale = sale
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday 
+    #delivery.movement = 'Заявка принята в обработку'
+    #delivery.details='Заявка принята в обработку'
+    #delivery.save()
     #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заказ в пути'
-    delivery.details='Заказ в пути'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
-    delivery.save()
+    #delivery.save()
     
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заявка закрыта, заказ доставлен'
-    delivery.details='Заявка закрыта, заказ доставлен'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=1)
-    delivery.save()
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заказ в пути'
+    #delivery.details='Заказ в пути'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    #delivery.save()
+    
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заявка закрыта, заказ доставлен'
+    #delivery.details='Заявка закрыта, заказ доставлен'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    #delivery.save()
 
     ##### ----- #####
 
@@ -427,7 +509,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 10
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Для своих ттх довольно шустрый , экран в паре с батареей выдают отличную автономность , если сравнивать с редми 9 3/32 то данный аппарат намного комфортнее , без фризов ,тротлинга'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -476,7 +558,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 11
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Отличный экран, обалденная камера, долго держит зарядку, сканер отпечатка пальца в кнопке включения, разблокировка по лицу, суперский внешний вид!'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -525,7 +607,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 12
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Экран, камеры, аккумулятор, шустрая память, сканер под стеклом, тройной слот (2sim+MicroSD), относительно невысокая цена, ловля сигнала всяких GPS (к обычным + байду и галилео), wifi многодиапазонный, NFC и 4G. Красивый дизайн и красивый небесный цвет.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -574,9 +656,50 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 13
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Достоинства:Обалденный телефон, качественный!'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+
+    sale = Sale()
+    #sale.saleday = datetime.now()
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 14
+    sale.rating = 4
+    sale.details='Достоинства:Не плохой аппарат за свои деньги. Недостатки:Немного греется при зарядке.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
 
     delivery = Delivery()
@@ -616,44 +739,44 @@ def beginning(apps, schema_editor):
     catalog.photo='images/product12.jpg'
     catalog.save()
     
-    sale = Sale()
-    #sale.saleday = datetime.now()
-    sale.catalog = catalog
-    sale.price = catalog.price
-    sale.quantity = 1
-    sale.user_id = 14
-    sale.rating = 5
-    sale.details='Отзыв'
-    sale.save()
-    sale.saleday = datetime.now() - timedelta(days=29)
-    sale.save()
+    #sale = Sale()
+    ##sale.saleday = datetime.now()
+    #sale.catalog = catalog
+    #sale.price = catalog.price
+    #sale.quantity = 1
+    #sale.user_id = 14
+    #sale.rating = 5
+    #sale.details='Отзыв'
+    #sale.save()
+    #sale.saleday = datetime.now() - timedelta(days=29)
+    #sale.save()
 
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday 
-    delivery.movement = 'Заявка принята в обработку'
-    delivery.details='Заявка принята в обработку'
-    delivery.save()
-    delivery.deliveryday = sale.saleday
-    delivery.save()
-    
-    delivery = Delivery()
-    delivery.sale = sale
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday 
+    #delivery.movement = 'Заявка принята в обработку'
+    #delivery.details='Заявка принята в обработку'
+    #delivery.save()
     #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заказ в пути'
-    delivery.details='Заказ в пути'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
-    delivery.save()
+    #delivery.save()
     
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заявка закрыта, заказ доставлен'
-    delivery.details='Заявка закрыта, заказ доставлен'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=1)
-    delivery.save()
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заказ в пути'
+    #delivery.details='Заказ в пути'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    #delivery.save()
+    
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заявка закрыта, заказ доставлен'
+    #delivery.details='Заявка закрыта, заказ доставлен'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    #delivery.save()
 
     ##### ----- #####
     
@@ -672,7 +795,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 15
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Соотношение цена-качество. Хорошая рабочая лошадка по адекватной цене. Брал жене на замену Xiaomi redmi note 3 pro. Жена довольна. Пользуется уже полгода, нареканий нет.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -721,7 +844,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 16
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Неплохой экран. Плёнка на экране и силиконовый чехол в комплекте на первые дни пользования. Камера нормальная.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -770,7 +893,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 17
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Достоинства:цена мощность экран быстрая зарядка батарея'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -818,8 +941,8 @@ def beginning(apps, schema_editor):
     sale.price = catalog.price
     sale.quantity = 1
     sale.user_id = 18
-    sale.rating = 5
-    sale.details='Отзыв'
+    sale.rating = 4
+    sale.details='Достоинства:Хороший дизайн, цена. Недостатки:Ошибки при работе с приложениями'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -868,7 +991,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 19
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Шустрый, неплохая камера за эти деньги, удачный интерфейс и неплохой экран, довольно долго работает без зарядки при повышенном уровне использования.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -917,7 +1040,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 20
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Сочетание, цены, комплектации железа. Ну и софта. Всё работает хорошо для цены бюджетного телефона.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -966,7 +1089,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 21
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Просто OPPO. У меня наушники, усилитель, беспроводная гарнитура всё OPPO. И что важно 8Гб+128Гб+слот для флэш карт.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -1015,7 +1138,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 22
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Достоинства:Буквально всё, камера, память, операционка Coloros,много настроек персонализации, габариты телефона , очень легкий и тонкий, среди засилья лопатофонов выглядит элегантно.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -1068,9 +1191,50 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 23
     sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.details='Достоинства:огромные кнопки. тел отлично подошел владелице 83 лет. довольна.'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+
+    sale = Sale()
+    #sale.saleday = datetime.now()
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 24
+    sale.rating = 4
+    sale.details='Достоинства:добротный,большой экран. Недостатки:тихий,мало мелодий на звонок'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
 
     delivery = Delivery()
@@ -1110,44 +1274,44 @@ def beginning(apps, schema_editor):
     catalog.photo='images/product22.jpg'
     catalog.save()
     
-    sale = Sale()
-    #sale.saleday = datetime.now()
-    sale.catalog = catalog
-    sale.price = catalog.price
-    sale.quantity = 1
-    sale.user_id = 24
-    sale.rating = 5
-    sale.details='Отзыв'
-    sale.save()
-    sale.saleday = datetime.now() - timedelta(days=29)
-    sale.save()
+    #sale = Sale()
+    ##sale.saleday = datetime.now()
+    #sale.catalog = catalog
+    #sale.price = catalog.price
+    #sale.quantity = 1
+    #sale.user_id = 24
+    #sale.rating = 5
+    #sale.details='Отзыв'
+    #sale.save()
+    #sale.saleday = datetime.now() - timedelta(days=29)
+    #sale.save()
 
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday 
-    delivery.movement = 'Заявка принята в обработку'
-    delivery.details='Заявка принята в обработку'
-    delivery.save()
-    delivery.deliveryday = sale.saleday
-    delivery.save()
-    
-    delivery = Delivery()
-    delivery.sale = sale
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday 
+    #delivery.movement = 'Заявка принята в обработку'
+    #delivery.details='Заявка принята в обработку'
+    #delivery.save()
     #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заказ в пути'
-    delivery.details='Заказ в пути'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
-    delivery.save()
+    #delivery.save()
     
-    delivery = Delivery()
-    delivery.sale = sale
-    #delivery.deliveryday = sale.saleday
-    delivery.movement = 'Заявка закрыта, заказ доставлен'
-    delivery.details='Заявка закрыта, заказ доставлен'
-    delivery.save()
-    delivery.deliveryday = sale.saleday + timedelta(hours=1)
-    delivery.save()
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заказ в пути'
+    #delivery.details='Заказ в пути'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    #delivery.save()
+    
+    #delivery = Delivery()
+    #delivery.sale = sale
+    ##delivery.deliveryday = sale.saleday
+    #delivery.movement = 'Заявка закрыта, заказ доставлен'
+    #delivery.details='Заявка закрыта, заказ доставлен'
+    #delivery.save()
+    #delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    #delivery.save()
 
     ##### ----- #####
     
@@ -1165,8 +1329,8 @@ def beginning(apps, schema_editor):
     sale.price = catalog.price
     sale.quantity = 1
     sale.user_id = 25
-    sale.rating = 5
-    sale.details='Отзыв!!'
+    sale.rating = 4
+    sale.details='Достоинства:Две симки;есть флэшка; привлекательный классический дизайн(корпус), Недостатки:Камеру я оценил на 3 с минусом.Или мне кажется,но такое ощущение что динамик не выдерживает громкости музыки,как будто то похрипывает,то нет,динамик могли и по качественней поставить'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=30)
     sale.save()
@@ -1215,7 +1379,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 26
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Достоинства:Громкий, Долго держит заряд (недели полторы точно).'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
@@ -1264,7 +1428,7 @@ def beginning(apps, schema_editor):
     sale.quantity = 1
     sale.user_id = 27
     sale.rating = 5
-    sale.details='Отзыв'
+    sale.details='Большой экран, большие клавиши, громкий звук. Удобная база, что легко поставит на заряд'
     sale.save()
     sale.saleday = datetime.now() - timedelta(days=29)
     sale.save()
