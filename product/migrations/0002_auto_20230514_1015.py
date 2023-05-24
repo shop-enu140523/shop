@@ -1077,7 +1077,7 @@ def beginning(apps, schema_editor):
     catalog = Catalog()
     catalog.category = category
     catalog.title='Смартфон OPPO Reno4 Lite, 8Gb, Black (CPH2125)'
-    catalog.info='Смартфоны серии Reno являются самыми тонкими и легкими в модельном ряду OPPO, корпус таких устройств имеет гладко закругленные края, им очень удобно пользоваться.'
+    catalog.details='Смартфоны серии Reno являются самыми тонкими и легкими в модельном ряду OPPO, корпус таких устройств имеет гладко закругленные края, им очень удобно пользоваться.'
     catalog.price=125990
     catalog.photo='images/product19.jpg'
     catalog.save()
@@ -1318,7 +1318,7 @@ def beginning(apps, schema_editor):
     catalog = Catalog()
     catalog.category = category
     catalog.title='Мобильный телефон TeXet TM-122, Black'
-    catalog.info='TM-122 – не простой телефон, функции которого ограничиваются звонками и SMS. FM-радио, встроенный плеер и многое другое расширяют спектр применения мобильного устройства и позволяют полноценно реализовать его потенциал при максимуме комфорта.'
+    catalog.details='TM-122 – не простой телефон, функции которого ограничиваются звонками и SMS. FM-радио, встроенный плеер и многое другое расширяют спектр применения мобильного устройства и позволяют полноценно реализовать его потенциал при максимуме комфорта.'
     catalog.price=4590
     catalog.photo='images/product23.jpg'
     catalog.save()
@@ -1459,6 +1459,506 @@ def beginning(apps, schema_editor):
     delivery.save()
     delivery.deliveryday = sale.saleday + timedelta(hours=1)
     delivery.save()
+
+    #################### -------------------- ####################
+
+    category = Category()
+    category.title='Смарт-часы'   
+    category.save()
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смарт-часы Jet Kid Connect, Pink'
+    catalog.details='Телефон, текстовые сообщения, голосовые сообщения, история перемещений, геолокация (только LBS), геозоны, кнопка SOS, удаленное фото, функция "Тихий звонок", будильник, встроенный фонарик, оповещение о разряде батареи, удаленный поиск часов (Anti lost)'
+    catalog.price=8990
+    catalog.photo='images/product26.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 4
+    sale.rating = 5
+    sale.details='Нормальный подарок для первоклассников'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смарт-часы Jet Kid Talk, Blue-Grey'
+    catalog.details='Текстовые сообщения, голосовые сообщения, геолокация (только LBS), геозоны, история перемещений, кнопка SOS, удаленное фото, функция "Тихий звонок", будильник, встроенный фонарик, удаленный поиск часов'
+    catalog.price=10990
+    catalog.photo='images/product27.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 8
+    sale.rating = 5
+    sale.details='Дизайн, качество связи'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смарт-часы Jet Kid Friend, Pink-White'
+    catalog.details='Стильные смарт-часы Jet Kid Friend выполняют не только свои главные функции в определении времени, по ним можно звонить, отправлять текстовые и голосовые сообщения и определять геолокацию. При этом есть возможность создавать безопасные для ребенка зоны, в которых ему разрешено находиться. Если же ребенок покинул одну из зон, то вы получите смс-уведомление на ваш смартфон.'
+    catalog.price=14990
+    catalog.photo='images/product28.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 12
+    sale.rating = 4
+    sale.details='Достоинства:Красивые. Недостатки:Геоалокация'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смарт-часы Canyon Marzipan CNS-SW75BL, Blue'
+    catalog.details='Личный женский календарь позволит вам фиксировать и отслеживать всю нужную информацию с помощью смартфона и приложения Canyon Life в стильном, ультрапрочном аксессуаре с алюминиевым корпусом. Часы обладают внушительным набором различных датчиков и функций, упрощают управление камерой, позволяют отслеживать важные уведомления и мотивируют заниматься физической активностью.'
+    catalog.price=16900
+    catalog.photo='images/product29.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 16
+    sale.rating = 4
+    sale.details='Достоинства:Зарядку держит неделю. Недостатки:Неудобный ремешок, спать мне в них не удобно, поэтому сон я не считаю'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смарт-часы Amazfit Neo A2001, Red'
+    catalog.details='Часы Amazfit Neo оснащены четырехугольным экраном в стиле ретро с четырьмя физическими кнопками. Их конструкция обеспечивает идеальное соотношение стиля и универсальности. Это гармоничное сочетание классического дизайна и современных функций.'
+    catalog.price=16990
+    catalog.photo='images/product30.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 20
+    sale.rating = 5
+    sale.details='Отличные часы, заряд держат долго, четкая картинка, очень много функций! Доставка быстрая! Советую!'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #################### -------------------- ####################
+
+    category = Category()
+    category.title='Планшет'   
+    category.save()
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Планшет Prestigio MultiPad Wize 4117 3G, 8Gb, Wi-Fi+3G, Black'
+    catalog.details='Wize 4117 3G – это 7.0-дюймовый 3G планшет на базе Android 8.1 Oreo. Удобный для решения повседневных задач благодаря соотношению качества изображения, функциональной начинки и дизайна корпуса.'
+    catalog.price=25990
+    catalog.photo='images/product31.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 3
+    sale.rating = 5
+    sale.details='Для просмотра видео, чтения книг, иногда Telegram и BK. Пользуюсь больше 2 месяцев, всё устраивает'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Планшет Prestigio Smartkids Max, 16Gb, Wi-Fi, Violet-Orange'
+    catalog.details='Android 9.0 и 4-ядерный процессор для комфортной работы. Оцените все преимущества SmartKids Max с 4-ядерным процессором, 1 ГБ оперативной памяти и 16ГБ встроенной памяти. С такой начинкой все приложения и игры запускаются быстро. Доступ к популярным приложениям и играм, видеороликам, книгам, телешоу и образовательному контенту от iWawa гарантирован без подвисаний. Базируется планшет на операционной системе Android 9.0 Pie (Go edition) с простым и интуитивно понятным интерфейсом. Разобраться с функциями и фишками гаджета еще никогда не было так просто.'
+    catalog.price=37500
+    catalog.photo='images/product32.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 7
+    sale.rating = 4
+    sale.details='батарея не самая мощная что-то около 3х часов'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Планшет Lenovo Tab M8 (3rd Gen) TB-8506F, 32 GB, Wi-Fi, Iron Grey'
+    catalog.details='Планшет Lenovo Tab M8 (3rd Gen) — ваш проводник в мир мультимедийных развлечений в формате HD. Времени автономной работы достаточно, чтобы вы могли часами наслаждаться любимыми видео без необходимости подзарядки, а благодаря сертификации TÜV существенно снижается зрительная нагрузка. Потрясающий 8-дюймовый TDDI-дисплей с матрицей IPS и узкими рамками обеспечивает превосходное качество изображения, а восьмиядерные процессоры, которыми теперь оснащается это устройство, являются залогом его высочайшей производительности на долгое время.'
+    catalog.price=56900
+    catalog.photo='images/product33.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 11
+    sale.rating = 5
+    sale.details='Меня все устроило. Выбирала по отзывам, цене и возможности использовать sim. Брала как резервный аппарат. Установила мессенджеры, YouTube, пару детских лёгких игр и приложения Юла и ВБ. На все встроенной памяти хватило, все тянет достаточно шустро.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Планшет Samsung Galaxy Tab A8, 10.5", 64Gb, Wi-Fi+4G, Silver'
+    catalog.details='Широкий 8.7-дюймовый дисплей для ярких впечатлений от фильмов и игр. Тонкая рамка позволила увеличить экран без изменения размеров планшета. Благодаря компактному эргономичному корпусу планшет очень удобно держать в руках, даже работая и играя часами.'
+    catalog.price=66990
+    catalog.photo='images/product34.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 14
+    sale.rating = 5
+    sale.details='Добротный, красивый, все пришло как надо, зарядник наш,не евровилка! Звук и яркость хорошие! Внешние качества супер! Экран большой, сам тонкий! Я довольна!'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Планшет Samsung Galaxy Tab A8, 10.5", 64Gb, Wi-Fi+4G, Silver'
+    catalog.details='Благодаря тонким рамкам (10.2 мм) планшета Galaxy Tab A8 вы сможете полностью погрузиться в происходящее на большом 10.5" экране. Наслаждайтесь любимыми фильмами и контентом вместе с Galaxy Tab A8, открывая для себя новый удивительный мир.'
+    catalog.price=96990
+    catalog.photo='images/product35.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 21
+    sale.rating = 5
+    sale.details='Лёгкий, шустрый, большой'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=30)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
 
     print("Catalog Ok")
 

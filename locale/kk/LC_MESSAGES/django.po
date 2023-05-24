@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-14 15:48+0600\n"
+"POT-Creation-Date: 2023-05-17 16:05+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
 #: .\product\forms.py:26 .\product\models.py:32 .\product\models.py:65
 #: .\templates\catalog\index.html:13
 msgid "category_title"
@@ -26,9 +27,9 @@ msgid "Value must start with a capital letter"
 msgstr "Мән бас әріптен басталуы керек"
 
 #: .\product\forms.py:49 .\product\models.py:141
-#: .\templates\category\create.html:6 .\templates\category\edit.html:6
-#: .\templates\category\read.html:6 .\templates\delivery\list.html:21
-#: .\templates\report\index.html:160
+#: .\templates\catalog\list.html:24 .\templates\category\create.html:6
+#: .\templates\category\edit.html:6 .\templates\category\read.html:6
+#: .\templates\delivery\list.html:21 .\templates\report\index.html:160
 msgid "category"
 msgstr "Санат"
 
@@ -44,7 +45,8 @@ msgstr "Өнім сипаттамасы"
 
 #: .\product\forms.py:52 .\product\models.py:46 .\product\models.py:68
 #: .\product\models.py:88 .\product\models.py:109 .\product\models.py:144
-#: .\templates\catalog\index.html:16
+#: .\templates\catalog\index.html:16 .\templates\catalog\list.html:61
+#: .\templates\catalog\list.html:63
 msgid "price"
 msgstr "Бағасы"
 
@@ -102,6 +104,7 @@ msgid "saleday"
 msgstr "Сату күні"
 
 #: .\product\models.py:112 .\product\models.py:148
+#: .\templates\catalog\list.html:66 .\templates\catalog\list.html:68
 #: .\templates\report\index.html:194
 msgid "rating"
 msgstr "Баға"
@@ -171,7 +174,7 @@ msgstr "Жаңалықтар мәліметтері"
 msgid "photo_news"
 msgstr "Фото"
 
-#: .\product\views.py:197
+#: .\product\views.py:235
 msgid "Item added to basket"
 msgstr "Өнім себетке қосылды"
 
@@ -337,7 +340,7 @@ msgstr "Жасау"
 msgid "Save"
 msgstr "Сақтау"
 
-#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:96
+#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:172
 msgid "Catalog details"
 msgstr "Сипаттама"
 
@@ -351,7 +354,7 @@ msgstr "Барлығы сатылған"
 msgid "Reviews"
 msgstr "Пікірлер"
 
-#: .\templates\catalog\details.html:90 .\templates\catalog\list.html:102
+#: .\templates\catalog\details.html:90 .\templates\catalog\list.html:178
 #: .\templates\index.html:187
 msgid "Avg Rating"
 msgstr "Орташа рейтинг"
@@ -382,7 +385,33 @@ msgstr "Көру"
 msgid "Catalog list"
 msgstr "Толық каталог"
 
-#: .\templates\catalog\list.html:107
+#: .\templates\catalog\list.html:18
+msgid "Search"
+msgstr "Іздеу"
+
+#: .\templates\catalog\list.html:41 .\templates\catalog\list.html:56
+#: .\templates\catalog\list.html:58 .\templates\delivery\list.html:22
+#: .\templates\news\index.html:13 .\templates\report\index.html:161
+msgid "title"
+msgstr "Аты"
+
+#: .\templates\catalog\list.html:51
+msgid "Sort"
+msgstr "Сұрыптау"
+
+#: .\templates\catalog\list.html:77
+msgid "desc"
+msgstr "Кері тәртіпте"
+
+#: .\templates\catalog\list.html:84
+msgid "Go"
+msgstr "Жүгіру"
+
+#: .\templates\catalog\list.html:85
+msgid "Reset"
+msgstr "Қалпына келтіру"
+
+#: .\templates\catalog\list.html:183
 msgid "Add to basket"
 msgstr "Себетке қосу"
 
@@ -408,11 +437,6 @@ msgstr "Жеткізу"
 #: .\templates\report\index.html:14 .\templates\report\index.html:113
 msgid "Sale"
 msgstr "Сатылым"
-
-#: .\templates\delivery\list.html:22 .\templates\news\index.html:13
-#: .\templates\report\index.html:161
-msgid "title"
-msgstr "Аты"
 
 #: .\templates\delivery\read.html:14
 msgid "delivery_title"
@@ -535,8 +559,9 @@ msgstr "Құпия сөзді қалпына келтіру мүмкін бол�
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
-msgstr "Құпия сөзді қалпына келтіру сілтемесі жарамсыз, себебі "
-"пайдаланылды. Жаңа құпия сөзді қалпына келтіруді сұраңыз."
+msgstr ""
+"Құпия сөзді қалпына келтіру сілтемесі жарамсыз, себебі пайдаланылды. Жаңа "
+"құпия сөзді қалпына келтіруді сұраңыз."
 
 #: .\templates\registration\password_reset_done.html:6
 msgid "Password reset"
