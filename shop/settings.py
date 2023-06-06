@@ -32,8 +32,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'shop-enu.onrender.com',]
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -92,6 +90,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+
+    #'default': {
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #    'NAME': 'shop_5osb',
+    #    'USER' : 'shop_admin',
+    #    'PASSWORD' : 'hvBQbuUx8pWf3rgwbCzyxG3AXkWi7cYu',
+    #    'HOST' : 'dpg-chvjhrpmbg5b5p95p6vg-a.frankfurt-postgres.render.com',
+    #    'PORT' : '5432',        
+    #}
+
 }
 
 

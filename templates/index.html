@@ -153,7 +153,21 @@
 					<div class="carousel-item">
 						<img src="{% static 'images/product35.jpg' %}" alt="" class="d-block w-100">
 					</div>
-
+					<div class="carousel-item">
+						<img src="{% static 'images/product36.jpg' %}" alt="" class="d-block w-100">
+					</div>
+					<div class="carousel-item">
+						<img src="{% static 'images/product37.jpg' %}" alt="" class="d-block w-100">
+					</div>
+					<div class="carousel-item">
+						<img src="{% static 'images/product38.jpg' %}" alt="" class="d-block w-100">
+					</div>
+					<div class="carousel-item">
+						<img src="{% static 'images/product39.jpg' %}" alt="" class="d-block w-100">
+					</div>
+					<div class="carousel-item">
+						<img src="{% static 'images/product40.jpg' %}" alt="" class="d-block w-100">
+					</div>
 				</div>
 				<!-- Left and right controls/icons -->
 				<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
@@ -167,9 +181,17 @@
 		<div class="col-md-8">
 			<h2 class="text-center"><a class="nav-link" href="#home">{% trans "Welcome" %}!</a></h2>	
 			{% if LANGUAGE_CODE == 'kk' %}
-				<p>Сәкен Сейфуллин көшесі 47, Астана 010000</p>
+				<address>
+					<p>Жолымбет кенті, Бауыржан Момышұлы 10</p>			
+				</address>				
+				<p><a href="tel:+77079160312">+7(707)916-0312</a></p>
+				<p>Құрмет Есенбол</p>
 			{% else %}
-				<p>ул. Сакена Сейфуллина 47, Астана 010000</p>			
+				<address>
+					<p>пос. Жолымбет, Бауыржан Момышұлы 10</p>			
+				</address>				
+				<p><a href="tel:+77079160312">+7(707)916-0312</a></p>
+				<p>Құрмет Есенбол</p>			
 			{% endif %}	
 		</div>	
 	</div>	
@@ -255,6 +277,16 @@
 							<img style="height:200px; max-width:200px;;" src="{% static 'images/product34.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    
 						{% elif c.photo.url == "/media/images/product35.jpg" %}
 							<img style="height:200px; max-width:200px;;" src="{% static 'images/product35.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    																				
+						{% elif c.photo.url == "/media/images/product36.jpg" %}
+							<img style="height:200px; max-width:200px;;" src="{% static 'images/product36.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    
+						{% elif c.photo.url == "/media/images/product37.jpg" %}
+							<img style="height:200px; max-width:200px;;" src="{% static 'images/product37.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    
+						{% elif c.photo.url == "/media/images/product38.jpg" %}
+							<img style="height:200px; max-width:200px;;" src="{% static 'images/product38.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    
+						{% elif c.photo.url == "/media/images/product39.jpg" %}
+							<img style="height:200px; max-width:200px;;" src="{% static 'images/product39.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    
+						{% elif c.photo.url == "/media/images/product40.jpg" %}
+							<img style="height:200px; max-width:200px;;" src="{% static 'images/product40.jpg' %}" alt="{{ c.title }}" title="{{ c.details }}">    																				
 						{% else %}
 							{% if c.photo.url != None %}
 								<img style="height:200px; max-width:200px;;" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">

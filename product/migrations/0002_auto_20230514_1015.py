@@ -1170,6 +1170,251 @@ def beginning(apps, schema_editor):
     delivery.deliveryday = sale.saleday + timedelta(hours=1)
     delivery.save()
 
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смартфон Apple iPhone 13 Pro Max, 1Tb, Graphite (MLN63)'
+    catalog.details='Значительно более мощная система камер. Абсолютно новые ощущения от дисплея. Самый быстрый чип для iPhone. Исключительная прочность. И огромный прирост ресурса аккумулятора. Система камер Pro Max получила самое масштабное обновление. Улучшенная аппаратная часть позволяет передать ещё больше деталей. Интеллектуальное программное обеспечение открывает новые возможности для съёмки фото и видео. Супербыстрый чип поддерживает все эти инновации. Так вы ещё не снимали.'
+    catalog.price=949990 
+    catalog.photo='images/product36.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 22
+    sale.rating = 5
+    sale.details='Перешёл на 13 pro max после 12. Первое, что бросается в глаза - габариты. И если при прямом сравнении разница не такая большая, то тактильно она ощущается будто аппарат в два раза шире, длиннее, толще, тяжелее. Отсюда все стандартные особенности лопаты - не в каждый карман влезет, носить неудобно, одной рукой не всегда можно пользоваться (риск уронить) и др. Но тут каждый сам, как говорится, решает, что ему важнее - компактность или автономность.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смартфон Apple iPhone 13 Pro, 512Gb, Gold (MLWC3)'
+    catalog.details='Новая сверхширокоугольная камера с обновлённым объективом и мощной системой автофокуса теперь может снимать на расстоянии всего 2 см от объекта. Самые мелкие детали будут выглядеть масштабно - узор листа, лапки насекомого или капля росы.'
+    catalog.price=799990 
+    catalog.photo='images/product37.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 23
+    sale.rating = 5
+    sale.details='Перечисленные достоинства данного устройства включают в себя прекрасный внешний вид, модули камер, которые являются очень крутыми и удобными в использовании, 120-герцовый дисплей, который обеспечивает приятные ощущения, зарядка, которой хватает на минимум день активного использования, и относительно компактные размеры, которые немного меньше, чем у XR. Заднее стекло имеет матовую поверхность и практически не оставляет следов и разводов.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+    
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смартфон Apple iPhone 12 Pro, 512Gb, Pacific Blue (MGMX3)'
+    catalog.details='A14 Bionic — первый процессор iPhone, созданный с применением 5‑нанометровой технологии. Его передовые компоненты по размеру сопоставимы с атомами. В нём на 40% больше транзисторов, поэтому процессор работает быстрее и при этом ещё более экономно расходует заряд аккумулятора. А новый процессор обработки сигнала позволяет снимать видео в стандарте Dolby Vision — это недоступно даже профессиональным кинокамерам, не говоря уже о других смартфонах.'
+    catalog.price=689990 
+    catalog.photo='images/product38.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 24
+    sale.rating = 5
+    sale.details='Этот телефон имеет множество преимуществ и отлично подходит для использования в повседневной работе.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=29)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+ 
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смартфон Apple iPhone 12 Pro Max, 256Gb, Silver (MGDD3)'
+    catalog.details='A14 Bionic — первый процессор iPhone, созданный с применением 5‑нанометровой технологии. Его передовые компоненты по размеру сопоставимы с атомами. В нём на 40% больше транзисторов, поэтому процессор работает быстрее и при этом ещё более экономно расходует заряд аккумулятора. А новый процессор обработки сигнала позволяет снимать видео в стандарте Dolby Vision — это недоступно даже профессиональным кинокамерам, не говоря уже о других смартфонах.'
+    catalog.price=629700 
+    catalog.photo='images/product39.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 25
+    sale.rating = 5
+    sale.details='Пользуюсь данным устройством второй год. Как практически и вся продукция Apple, устройство соответствует своему уровню качества. Не могу не отметить живучесть данного телефона, с головой хватает на весь день при активном использовании. Даже спустя не малый срок использования и уничтоженный аккумулятор (84% максимальной ёмкости) продолжает радовать своей живучестью. Из минусов могу отметить что хирургическая сталь царапается в слюни практически сразу после распаковки. И даже если вы думаете что засунете его в чехол и никогда его не достанете и с ним будет всё в порядке - вы глубоко заблуждаетесь. Тем не менее устройство довольно крепкое, пережило уйму падений об асфальт и кафель, в чехле и без, падало в воду, так же телефон на ежедневной основе проводит сражения с ключами в кармане, но ни царапин ни сколов на телефоне не имеется (не считая царапин на глянцевой стали которые появляются буквально от воздуха) В общем и целом отличный телефон, пятёрочка.'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=27)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+    
+    #####
+    
+    catalog = Catalog()
+    catalog.category = category
+    catalog.title='Смартфон Apple iPhone Xs Max, 256Gb, Space Gray'
+    catalog.details='Использование таких технологий позволило создать HDR‑дисплей с великолепной цветопередачей, глубокими чёрными цветами, впечатляющей яркостью и контрастом. Это самые чёткие дисплеи с самой высокой плотностью пикселей.'
+    catalog.price=469900 
+    catalog.photo='images/product40.jpg'
+    catalog.save()
+    
+    sale = Sale()
+    #sale.saleday = datetime.now() 
+    sale.catalog = catalog
+    sale.price = catalog.price
+    sale.quantity = 1
+    sale.user_id = 25
+    sale.rating = 5
+    sale.details='Отличный товар'
+    sale.save()
+    sale.saleday = datetime.now() - timedelta(days=25)
+    sale.save()
+
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday 
+    delivery.movement = 'Заявка принята в обработку'
+    delivery.details='Заявка принята в обработку'
+    delivery.save()
+    delivery.deliveryday = sale.saleday
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заказ в пути'
+    delivery.details='Заказ в пути'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=0.5)
+    delivery.save()
+    
+    delivery = Delivery()
+    delivery.sale = sale
+    #delivery.deliveryday = sale.saleday
+    delivery.movement = 'Заявка закрыта, заказ доставлен'
+    delivery.details='Заявка закрыта, заказ доставлен'
+    delivery.save()
+    delivery.deliveryday = sale.saleday + timedelta(hours=1)
+    delivery.save()
+
     #################### -------------------- ####################
 
     category = Category()
@@ -1958,6 +2203,7 @@ def beginning(apps, schema_editor):
     delivery.deliveryday = sale.saleday + timedelta(hours=1)
     delivery.save()
 
+    
     #####
 
     print("Catalog Ok")
@@ -2042,5 +2288,10 @@ class Migration(migrations.Migration):
                         (SELECT strftime('%d.%m.%Y',deliveryday) || ' - ' || movement FROM delivery WHERE sale_id = sale.id AND deliveryday = (SELECT MAX(deliveryday) AS Expr1 FROM delivery AS S WHERE  (sale_id = sale.id) )) AS final
                         FROM sale LEFT JOIN view_catalog ON sale.catalog_id = view_catalog.id
                         LEFT JOIN auth_user ON sale.user_id = auth_user.id"""),
+        #migrations.RunSQL("""CREATE VIEW view_sale AS
+        #                SELECT sale.id, username, saleday, catalog_id, view_catalog.category, view_catalog. title, view_catalog.photo, sale.price, sale.quantity, sale.price*sale.quantity AS total, user_id, rating, sale.details,
+        #                (SELECT to_char( deliveryday, 'DD.MM.YYYY') || ' - ' || movement FROM delivery WHERE sale_id = sale.id AND deliveryday = (SELECT MAX(deliveryday) AS Expr1 FROM delivery AS S WHERE  (sale_id = sale.id) )) AS final
+        #                FROM sale LEFT JOIN view_catalog ON sale.catalog_id = view_catalog.id
+        #                LEFT JOIN auth_user ON sale.user_id = auth_user.id"""),
     ]
 
